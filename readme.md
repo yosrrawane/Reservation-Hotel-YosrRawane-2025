@@ -1,4 +1,4 @@
-yhcdhvjhadvEasyHotel_Spec.pdf
+EasyHotel_Spec.pdf
 Projet – Document de Spécifications – Rendu 1
 Auteurs : Yosr Rawane, taha ben rayana , rana miled , wassim belhaj , ele gharbi .
 1. Introduction au projet
