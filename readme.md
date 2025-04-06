@@ -62,4 +62,10 @@ Chambre dispo	Infos complètes	Résultat attendu
 Oui	Oui	Réservation confirmée
 Non	Oui	Message : « chambre non dispo »
 Oui	Non	Message : « infos incomplètes »
+## 📊 Diagrammes UML
 
+### Cas d'utilisation
+![Cas d'utilisation](diagrammes/cas_utilisation.png)
+
+### Diagramme de classes
+![Diagramme de classes](diagrammes/diagramme_classe.png)
