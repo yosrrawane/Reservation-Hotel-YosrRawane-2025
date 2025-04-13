@@ -1,0 +1,60 @@
+@startuml
+' Couleurs et style (optionnel)
+skinparam classAttributeIconSize 0
+
+' Classes métier
+class Client {
+  - id : int
+  - nom : String
+  - prénom : String
+  - email : String
+  - téléphone : String
+}
+
+class Reservation {
+  - id : int
+  - dateDebut : Date
+  - dateFin : Date
+  - statut : String
+  - dateCreation : Date
+}
+
+class Chambre {
+  - id : int
+  - numero : String
+  - type : String
+  - prixParNuit : double
+  - disponible : boolean
+}
+
+class Paiement {
+  - id : int
+  - montant : double
+  - date : Date
+  - modePaiement : String
+  - statut : String
+}
+
+class Utilisateur {
+  - id : int
+  - nomUtilisateur : String
+  - motDePasse : String
+  - rôle : String
+}
+
+class Hotel {
+  - id : int
+  - nom : String
+  - adresse : String
+  - ville : String
+  - catégorie : String
+}
+
+' Associations
+Client "1" --> "0..*" Reservation : fait
+Reservation "1" --> "1" Chambre : concerne
+Reservation "1" --> "0..1" Paiement : est payée par
+Chambre "0..*" --> "1" Hotel : appartient à
+Utilisateur "1" --> "1" Hotel : gère
+
+@enduml

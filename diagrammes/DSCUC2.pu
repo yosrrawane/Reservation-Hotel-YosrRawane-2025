@@ -1,0 +1,20 @@
+@startuml
+actor Client
+participant "PageRéservation" as UI
+participant "ReservationService" as RS
+participant "Chambre" as C
+participant "Reservation" as R
+participant "Paiement" as P
+
+Client -> UI : saisir dates + chambre
+UI -> RS : vérifier disponibilité()
+RS -> C : estDisponible(dateDebut, dateFin)
+C --> RS : true
+
+RS -> R : créerReservation(client, chambre, dates)
+RS -> P : initierPaiement(réservation)
+P --> RS : paiementOK
+
+RS --> UI : afficher confirmation
+UI --> Client : réservation confirmée
+@enduml
