@@ -1,4 +1,4 @@
-..........EasyHotel_Spec.pdf
+EasyHotel_Spec.pdf
 Projet – Document de Spécifications – Rendu 1
 Auteurs : Yosr Rawane, taha ben rayana , rana miled , wassim belhaj , ele gharbi .
 1. Introduction au projet
@@ -69,3 +69,26 @@ Oui	Non	Message : « infos incomplètes »
 
 ### Diagramme de classes
 ![Diagramme de classes](diagrammes/diagramme_classe.png)
+# Rendu 2 – Conception Préliminaire
+
+## 1. Diagramme de classes
+
+![Diagramme de classes](diagrammes/diagramme_classes.png)
+
+## 2. Diagrammes de séquence
+
+- [DSUC1 – Faire une réservation](diagrammes/dsuc1.png)
+- [DSUC2 – Annuler une réservation](diagrammes/dsuc2.png)
+- [DSUC3 – Payer une réservation](diagrammes/dsuc3.png)
+
+## 3. Liste des classes métier
+
+| Classe | Attributs |
+|--------|-----------|
+| Client | id, nom, prénom, email |
+| Chambre | id, type, prix |
+| ... | ... |
+
+## 4. Commentaires
+
+> Ceci est une première version de la conception préliminaire. Elle sera améliorée au fil des sprints suivants.

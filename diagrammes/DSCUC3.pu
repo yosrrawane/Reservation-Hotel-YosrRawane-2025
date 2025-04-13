@@ -1,0 +1,20 @@
+@startuml
+actor Client
+participant "PagePaiement" as UI
+participant "PaiementService" as PS
+participant "Paiement" as P
+
+Client -> UI : entrer infos paiement
+UI -> PS : traiterPaiement(infos)
+PS -> P : validerPaiement()
+
+alt paiement refusé
+  P --> PS : échec
+  PS --> UI : afficher erreur
+  UI --> Client : paiement échoué
+else paiement accepté
+  P --> PS : succès
+  PS --> UI : confirmation
+  UI --> Client : paiement validé
+end
+@enduml
